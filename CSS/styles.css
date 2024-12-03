@@ -200,11 +200,6 @@ body {
       width: auto;
       min-height: auto;
       margin: 0;
-
-      &.grid__item Medium {
-        grid-row:  span 2;
-        grid-column: span 2;
-      }
     }
  
 
