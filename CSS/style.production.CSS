@@ -1,8 +1,25 @@
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+  --link-color: #2510dd;
+  --Visited-link-color: hsl(300, 91%, 23%);
+  --active-link: #f31212;
+  --H2andH3-FontWeight: 700;
+  --H3-FontSize: 18px;
+  --H2-FontSize: 24px; 
+  --P_element-fontSize: medium;
+  --P_element-fontWeight: 400;
+
+}
+
+
+
 body {
-    font-family: "Sour Gummy", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
     font-variation-settings: normal;
     background-color: rgb(241, 241, 241);
    
@@ -128,32 +145,84 @@ body {
         font-family: inherit;
         color: white;
         text-decoration: none;
-        border-radius: 3px;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.3);
         display: flex;
         width: 100%;
         padding: 10px;
+        
     }
   
     .page-header__item {
       flex: 0 1 100px;
+      
     }
   
     .page-header__item:last-child {
       flex-grow: 1;
       text-align: right;
     }
+
+    .page-header__img {
+      position: absolute; 
+      top: -65px;             
+      left: -20px;            
+      z-index: 1000;
+      width: 215px;
+      height: auto;
+  }
   
     .navigation-list {
       list-style-type: none;
+      
     }
   
     .navigation-list li {
       display: inline-block;
       margin-left: 15px;
+      
     }
    
-      
+
+.navigation-list__item {
+  position: relative;
+  color: #FFF; 
+  text-decoration: none;
+  padding: 10px 20px; 
+  display: inline-block;
+  z-index: 1;
+}
+
+
+.navigation-list__item:before,
+.navigation-list__item:after {
+  position: absolute;
+  opacity: 0;
+  width: 0%;
+  height: 2px;
+  content: '';
+  background: #4f7a71; 
+  transition: all 0.3s;
+}
+
+
+.navigation-list__item:before {
+  left: 0px;
+  top: 0px;
+}
+
+
+.navigation-list__item:after {
+  right: 0px;
+  bottom: 0px;
+}
+
+
+.navigation-list__item:hover:before,
+.navigation-list__item:hover:after {
+  opacity: 1;
+  width: 100%; 
+}
+
+
     .page-footer{
       clear: both;
       display: flex;
@@ -310,4 +379,4 @@ body {
     list-style: none;
   }
   
-  
+ 
