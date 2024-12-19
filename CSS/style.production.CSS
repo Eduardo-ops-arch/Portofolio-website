@@ -262,21 +262,69 @@ body {
         grid-gap: 20px;
         grid-template-rows: repeat(6, 200px);
         grid-template-columns: repeat(5, 300px);
-        
+        justify-content: center; 
+        align-content: center; 
       }
       .grid__Item {
         background-color: lightgray;
-        width: auto;
-        min-height: auto;
-        margin: 0;
-  
-        &.grid__item Medium {
-          grid-row:  span 2;
-          grid-column: span 2;
-        }
+        border: 1px solid #ddd; /* Add a border for distinction */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        border-radius: 10px; /* Rounded corners */
+        padding: 30px; /* Inner spacing */
+        display: flex; /* Make each grid item a flex container */
+        flex-direction: column; /* Stack the children vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        text-align: center; 
       }
-   
-  
+      
+      .grid__Item h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px; /* Space below the title */
+      }
+
+      .grid__Item p {
+        font-size: 1rem;
+        margin-bottom: 15px; /* Space below the paragraph */
+      }
+      
+      .grid__Item a {
+        text-decoration: none; /* Remove underline */
+        color: #007bff; /* Blue color for links */
+        font-weight: bold;
+        border: 2px solid #007bff; /* Add a border around the link */
+        border-radius: 5px; /* Rounded corners for the link */
+        padding: 5px 10px; /* Padding for clickable area */
+        transition: all 0.3s ease; /* Smooth hover transition */
+      }
+      
+      .grid__Item a:hover {
+        background-color: #007bff; /* Blue background on hover */
+        color: #fff; /* White text on hover */
+      }
+
+      .grid .grid__Item:nth-child(1) {
+        grid-column-start:  2;
+           }
+
+           .grid .grid__Item:nth-child(2) {
+            grid-column-start:  3;
+            grid-row: 1;
+               }
+
+               .grid .grid__Item:nth-child(3) {
+                grid-column-start:  4;
+                grid-row: 1;
+                   }
+
+                   .grid .grid__Item:nth-child(4) {
+                    grid-column-start:  2;
+                    grid-row: 2;
+                       }
+
+      .grid .grid__Item:nth-child(5) {
+   grid-column-start:  3;
+      }
      
   
   #formContact {
